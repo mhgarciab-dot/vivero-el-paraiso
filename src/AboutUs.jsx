@@ -3,13 +3,13 @@ import React from 'react';
 const AboutUs = () => {
   return (
     <section className="about-us-container" aria-labelledby="about-title">
-      <h2 id="about-title">Sobre Vivero el Paraiso</h2>
+      <h2 id="about-title">About Paradise Nursery</h2>
       <p className="about-description">
-        En Vivero el Paraiso, nos apasiona conectar a las personas con la naturaleza. 
-        Ofrecemos una cuidada selección de plantas de interior de la más alta calidad, 
-        diseñadas para transformar tu hogar en un oasis de tranquilidad y aire fresco. 
-        Desde suculentas de bajo mantenimiento hasta exuberantes helechos tropicales, 
-        nuestro compromiso es guiarte en el cuidado de tus plantas.
+        At Paradise Nursery, we are passionate about connecting people with nature. 
+        We offer a carefully curated selection of high-quality indoor plants, 
+        designed to transform your home into an oasis of tranquility and fresh air. 
+        From low-maintenance succulents to lush tropical ferns, our commitment 
+        is to guide you in caring for your plants.
       </p>
     </section>
   );

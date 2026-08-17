@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import AboutUs from './AboutUs';
+
 import ProductList from './ProductList';
+import AboutUs from './AboutUs';
 import './App.css';
 
 function App() {
@@ -18,9 +19,9 @@ function App() {
             <h1>Paradise Nursery</h1>
             <AboutUs />
             <button 
-              className="get-started-btn" 
+              className="get-started-btn"
               onClick={handleGetStarted}
-              aria-label="Comenzar a comprar plantas"
+              aria-label="Get Started"
             >
               Get Started
             </button>

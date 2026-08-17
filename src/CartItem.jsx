@@ -35,42 +35,35 @@ const CartItem = ({ onContinueShopping }) => {
   };
 
   const handleCheckoutShopping = () => {
-    alert("Próximamente: La funcionalidad de pago estará disponible pronto.");
+    alert("Coming Soon");
   };
 
   return (
     <main className="cart-container">
-      <h2>Cesta de la Compra</h2>
-      <h3>Artículos totales: {calculateTotalQuantity()}</h3>
-      <h3>Monto Total: ${calculateTotalAmount()}</h3>
+      <h2>Shopping Cart</h2>
+      <h3>Total Plants: {calculateTotalQuantity()}</h3>
+      <h3>Total Cost: ${calculateTotalAmount()}</h3>
 
       {cart.length === 0 ? (
-        <p>Tu carrito está vacío.</p>
+        <p>Your cart is empty</p>
       ) : (
         cart.map((item, index) => (
           <article key={index} className="cart-item">
             <img src={item.image} alt={item.name} className="cart-item-img" />
             <div style={{ flex: 1, marginLeft: '20px' }}>
               <h4>{item.name}</h4>
-              <p>Precio unitario: {item.cost}</p>
+              <p>Unit Price: {item.cost}</p>
               <p>Subtotal: ${(parseCost(item.cost) * item.quantity).toFixed(2)}</p>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <button 
-                onClick={() => handleDecrement(item)}
-                aria-label={`Disminuir cantidad de ${item.name}`}
-              >-</button>
+              <button onClick={() => handleDecrement(item)}>-</button>
               <span>{item.quantity}</span>
-              <button 
-                onClick={() => handleIncrement(item)}
-                aria-label={`Aumentar cantidad de ${item.name}`}
-              >+</button>
+              <button onClick={() => handleIncrement(item)}>+</button>
               <button 
                 onClick={() => handleRemove(item.name)}
-                style={{ backgroundColor: '#e53935', color: '#fff', border: 'none', padding: '5px 10px', borderRadius: '4px', cursor: 'pointer' }}
-                aria-label={`Eliminar ${item.name} de la cesta`}
+                style={{ backgroundColor: '#e53935', color: '#fff', border: 'none', padding: '5px 10px' }}
               >
-                Eliminar
+                Delete
               </button>
             </div>
           </article>
@@ -79,10 +72,10 @@ const CartItem = ({ onContinueShopping }) => {
 
       <div style={{ marginTop: '20px', display: 'flex', gap: '15px' }}>
         <button className="action-btn" onClick={onContinueShopping}>
-          Continuar comprando
+          Continue Shopping
         </button>
         <button className="action-btn" onClick={handleCheckoutShopping}>
-          Pagar
+          Checkout
         </button>
       </div>
     </main>
