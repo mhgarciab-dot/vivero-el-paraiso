@@ -1,0 +1,141 @@
+:root {
+  --primary-color: #2e7d32;
+  --secondary-color: #1b5e20;
+  --text-color: #212121;
+  --bg-light: #f4f6f4;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-light);
+}
+
+/* Landing Page Layout */
+.landing-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1470058869958-2a77ade41c02?q=80&w=1200');
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  padding: 20px;
+}
+
+.landing-content {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 700px;
+}
+
+.get-started-btn, .action-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+.get-started-btn:hover, .action-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.get-started-btn:disabled, .action-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 15px 30px;
+  color: var(--white);
+}
+
+.navbar a, .navbar button.nav-link {
+  color: var(--white);
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.cart-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-badge {
+  background-color: #e53935;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 0.85rem;
+  margin-left: 5px;
+}
+
+/* Products Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: var(--white);
+  padding: 15px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Cart Page */
+.cart-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 8px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.cart-item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
